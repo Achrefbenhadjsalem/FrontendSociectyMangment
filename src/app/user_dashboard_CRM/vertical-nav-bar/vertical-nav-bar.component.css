@@ -1,0 +1,54 @@
+.logo-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo_img {
+	width: 100px;
+    height: auto;
+    max-width: 50%; /* Ensure responsiveness */
+}
+
+.logotest {
+    flex-wrap: wrap;
+    width: 150px;  /* Half the previous width */
+    height: 90px;  /* Adjusted height */
+}
+
+.nav-items {
+    padding-top: 40px;
+
+    .nav-item {
+        padding: 25px 50px;
+        cursor: pointer;
+
+        @media only screen and (max-width: 1300px) {
+            padding: 25px 40px;
+        }
+
+        &:hover {
+            background-color: rgb(1, 38, 69);
+        }
+
+        .big {
+            font-size: 3rem;
+            margin-right: 20px;
+            font-size: 22px;
+        }
+
+        .icons {
+            color: #f2ebeb;
+            margin-right: 20px;
+            font-size: 22px;
+        }
+
+        span {
+            display: inline;
+
+            @media only screen and (max-width: 1300px) {
+                display: none;
+            }
+        }
+    }
+}

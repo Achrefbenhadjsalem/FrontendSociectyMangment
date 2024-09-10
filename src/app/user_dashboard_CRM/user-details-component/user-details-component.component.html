@@ -1,0 +1,26 @@
+<div class="user-profile" *ngIf="user">
+  <div class="profile-header">
+    <img [src]="user?.image || 'assets/images/UserProfile.jpg'" alt="User Profile Image" class="profile-image">
+    <div class="profile-info">
+      <h2>{{ user?.name }}</h2>
+      <p>{{ user?.email }}</p>
+    </div>
+  </div>
+
+  <div class="profile-details">
+    <h3>Account Details</h3>
+    <ul class="detail-list">
+      <li><strong>Username:</strong> {{ user?.username }}</li>
+      <li><strong>Email:</strong> {{ user?.email }}</li>
+      <li><strong>Address:</strong> {{ user?.address }}</li>
+      <li><strong>Phone Number:</strong> {{ user?.number }}</li>
+      <li><strong>Role:</strong> {{ user?.roles[0]?.name }}</li>
+    </ul>
+  </div>
+
+  
+</div>
+
+<div *ngIf="!user" class="loading-message">
+  <p>Loading user details...</p>
+</div>
